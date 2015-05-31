@@ -1,5 +1,6 @@
 - clean: ['~']
 - link:
+    ~/.bin: bin/
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.zshrc: zshrc
 - shell:
