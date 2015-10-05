@@ -1,0 +1,6 @@
+[user]
+    name = Kristján Ólafur Ólafsson
+    email = kristjanola13@ru.is
+[core]
+    excludesfile = ~/.gitignore
+
