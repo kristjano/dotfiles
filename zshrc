@@ -1,3 +1,8 @@
+# Allow local customizations in the ~/.zshrc_local file
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
