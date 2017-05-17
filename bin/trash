@@ -4,7 +4,7 @@ FILE="$1"
 EXT=""
 TRASH="$HOME/.Trash/"
 
-if [[ -f "${TRASH}${FILE}" ]]; then
+if [[ ! -f "${TRASH}${FILE}" ]]; then
     [[ "$FILE" == *.* ]] && EXT=".${FILE##*.}"
     FILE="${FILE%.*}"
 
@@ -17,4 +17,4 @@ if [[ -f "${TRASH}${FILE}" ]]; then
 
 fi
 
-mv $1 ${TRASH}${FILE}
+mv -n $1 ${TRASH}${FILE}
