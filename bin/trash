@@ -1,4 +1,20 @@
 #!/bin/bash
 
-mv $1 $HOME/.Trash
+FILE="$1"
+EXT=""
+TRASH="$HOME/.Trash/"
 
+if [[ -f "${TRASH}${FILE}" ]]; then
+    [[ "$FILE" == *.* ]] && EXT=".${FILE##*.}"
+    FILE="${FILE%.*}"
+
+    i=1
+    while [[ -f "${TRASH}${FILE}_${i}${EXT}" ]]; do
+        let i++
+    done
+
+    FILE="${FILE}_${i}${EXT}"
+
+fi
+
+mv $1 ${TRASH}${FILE}
