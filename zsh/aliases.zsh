@@ -5,4 +5,4 @@ alias cd..='cd ..'
 alias cd...='cd ...'
 alias cd....='cd ....'
 alias cd.....='cd .....'
-
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
