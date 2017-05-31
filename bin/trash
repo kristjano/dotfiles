@@ -4,6 +4,8 @@ FILE="$1"
 EXT=""
 TRASH="$HOME/.Trash/"
 
+test -e $1 || echo "trash: ${1}${FILE}: No such file or directory"
+
 if [[ -e "${TRASH}${FILE}" ]]; then
     [[ "$FILE" == *.* ]] && EXT=".${FILE##*.}"
     FILE="${FILE%.*}"
