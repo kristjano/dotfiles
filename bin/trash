@@ -4,12 +4,12 @@ FILE="$1"
 EXT=""
 TRASH="$HOME/.Trash/"
 
-if [[ ! -f "${TRASH}${FILE}" ]]; then
+if [[ -e "${TRASH}${FILE}" ]]; then
     [[ "$FILE" == *.* ]] && EXT=".${FILE##*.}"
     FILE="${FILE%.*}"
 
     i=1
-    while [[ -f "${TRASH}${FILE}_${i}${EXT}" ]]; do
+    while [[ -e "${TRASH}${FILE}_${i}${EXT}" ]]; do
         let i++
     done
 
