@@ -1,6 +1,7 @@
 [user]
-    name = Kristján Ólafur Ólafsson
-    email = kristjanola13@ru.is
+    name = Kristjan Olafur Olafsson
+    email = github@kristjano.me
+    signingkey = 7276CF27DA5D1074
 
 [core]
     excludesfile = ~/.gitignore
